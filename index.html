@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Random Font Generator</title>
+        <meta name="description" content="Google Font Generator">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->	
+        <link rel="stylesheet" href="css/normalize.css">	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>		
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+       
+        <div id="pageContainer"> 	
+				<div class="row">
+					<div id="main" class="col-lg-9">
+						<h1 id="heading">This is a heading</h1>						
+						<div id="paragraph"><span id="firstLine"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor. 
+						</div>
+
+						<div class="row text-center">
+							<div id="bigIcon" onclick="randomizeAllFonts();">
+								<i class="fa fa-refresh"></i>
+								<p>Randomize All Fonts</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="sidebar" class="col-lg-3">
+						<h2>Heading:</h2>						
+
+						<span id="headingFontInfo"></span>
+						<h3>Font Variants</h3>
+						<p id="headingFontVariants">1 font variant available.</p>
+
+						<button id="randomizeHeading" class="randomizeBtn" onclick="loadFont(true, false);"><i class="fa fa-refresh"></i>Randomize heading</button>
+
+						<hr>
+
+						<h2>Paragraph:</h2>
+						<span id="paragraphFontInfo"></span>
+						<h3>Font Variants</h3>
+						<p id="paragraphFontVariants">1 font variant available.</p>
+						<button id="randomizeParagraph" class="randomizeBtn" onclick="loadFont(false, true)";><i class="fa fa-refresh"></i>Randomize Paragraph</button>
+					</div>
+				</div>
+
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+        <script src="js/main.js"></script>
+		<script src="js/velocity.min.js"></script>
+		<script src="js/velocity.ui.min.js"></script>
+
+		<!--add google analytics script-->
+	
+
+		<script>
+		var headingChanged = false;
+		var randomFontObject;
+		var randomFontObject2;
+		$(document).ready(function(){
+			randomizeAllFonts();
+
+			$('#sidebar').height($(window).height());
+
+			// document.getElementById("heading").addEventListener("input", function() {
+			//     var value = document.getElementById("heading").value;
+			//     document.getElementById("heading").innerHtml = value;
+			//     headingChanged = true;
+			// }, false);
+		});//document ready
+
+		function randomizeAllFonts(){
+			loadFont(true, true);
+		}
+
+		function loadFont(heading, paragraph, variantChangeClicked){
+
+			$.ajax({ 
+			    type: 'GET', 
+			    url: 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDdklKz1qg_GvG_9ZjLL47pOq_1TdP5oD0', 
+			    //data: { get_param: 'value' }, 
+			    dataType: 'jsonp',
+			    success: function (data) { 				    	
+			    	var fontsArray = data.items;
+			    	randomFontObject = fontsArray[Math.floor(Math.random() * fontsArray.length)];
+			    	randomFontObject2 = fontsArray[Math.floor(Math.random() * fontsArray.length)];
+			    	// console.log(randomFontObject);
+			    	// console.log(randomFontObject2);
+
+			    	if (heading && paragraph) {
+						//changeFont(randomFontIndex.family, randomFontIndex2.family);
+						//$('#heading, #paragraph').css('opacity', 0);
+						randomizeHeading(randomFontObject);
+						randomizeParagraph(randomFontObject2);
+					}
+					else if (heading && !paragraph) {
+						//$('#heading').css('opacity', 0);
+						randomizeHeading(randomFontObject);
+					}
+					else if (!heading && paragraph) {
+						//$('#paragraph').css('opacity', 0);
+						randomizeParagraph(randomFontObject2);
+					}
+			    },
+			    error: function (XMLHttpRequest, textStatus, errorThrown) {
+	                console.log("error");
+	           } 
+			});
+		}
+
+		function randomizeFontVariant(element) {
+			if (element == heading) {
+				var fontVariantsQuantity = randomFontObject.variants.length;
+				var fontVariantsArray = randomFontObject.variants;
+				var randomVariant = fontVariantsArray[Math.floor(Math.random() * fontVariantsQuantity)];
+				$('#heading').css('font-weight', randomVariant);
+				alert(randomVariant);	
+			}
+			else {
+				var fontVariants = randomFontObject2.variants.length;
+			}
+			
+		}
+
+		function randomizeHeading(fontObject){
+			var fontName = fontObject.family;
+			fontNameForUrl = fontName.replace(/\s+/g, '+');
+		    WebFont.load({
+	            google: { 
+	                   families: [fontNameForUrl] 
+	                } 
+			 }); 
+
+			$('#heading').css({'font-family': fontName , opacity:1 });
+			$('#heading').html('This is ' + fontName + ' font family');	
+			$('#headingFontInfo').html('<a target="_blank" href="https://www.google.com/fonts/specimen/'+ fontNameForUrl +'">' + fontName + '</a>');
+
+			var fontVariants = '';
+			for (var i = 0; i < fontObject.variants.length; i++) {
+				fontVariants += '<span "useThisFontVariant(this, heading);>' + fontObject.variants[i] + '</span>';
+			}
+			$('#headingFontVariants').html(fontVariants);
+		}
+
+		function randomizeParagraph(fontObject2){
+			fontName2 = fontObject2.family;
+			fontNameForUrl2 = fontName2.replace(/\s+/g, '+');
+  		    WebFont.load({
+                google: { 
+                     families: [fontNameForUrl2] 
+                 } 
+		     }); 
+
+			$('#paragraph').css({'font-family': fontName2 , opacity: 1 });
+			$('#firstLine').html('This is ' + fontName2 + ' font family.');
+			$('#paragraphFontInfo').html('<a target="_blank" href="https://www.google.com/fonts/specimen/'+ fontNameForUrl2 +'">' + fontName2 + '</a>');
+
+			var fontVariants = '';
+			for (var i = 0; i < fontObject2.variants.length; i++) {
+				fontVariants += '<span onclick="useThisFontVariant(this, paragraph);">' + fontObject2.variants[i] + '</span>';
+			}
+			$('#paragraphFontVariants').html(fontVariants);
+		}
+
+		function useThisFontVariant(variantName, element){
+			//check if font variant name contains just numbers, just letters or both
+			var variantName = $(variantName).html();
+
+			var isNumber = /^\d+$/;
+			var isWord = /^\D+$/;
+			if (isNumber.test(variantName) == true) {
+				if (element == 'heading') {
+					alert('it\'s a heading');
+					$('#heading').css('font-weight', variantName);
+				}
+				else {
+					alert('it\'s a paragraph');
+					$('#paragraph').css('font-weight', variantName);	
+				}
+			}
+			else if (isWord.test(variantName) == true) {
+				alert('it\'s a word');
+			}
+			else {
+				alert('number and word');
+			}
+
+		}
+			
+		</script>
+		}
+    </body>
+</html>
