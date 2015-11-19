@@ -120,6 +120,11 @@ h2 {
     display:inline;
 }
 
+h3 {
+    display:inline-block;
+    margin-top:20px;
+}
+
 #pageContainer {
 	padding: 0;
 	min-height: 100%;
@@ -150,14 +155,14 @@ h2 {
     cursor: pointer;
     width: 300px;
     margin: 10% auto;
-    border-radius: 4px;
     padding: 10px;
-    border: 1px solid #40b2d9;
-    color:#40b2d9;
+    border: 1px solid #000;
+    color:#000;
+    font-family: 'Roboto';
 }
 
 #bigIcon:hover, #bigIcon:focus, #bigIcon:active {
-    background-color:#40b2d9;
+    background-color:#000;
     color:#fff;
 }
 
@@ -199,7 +204,6 @@ h2 {
     border: 1px solid #000;
     margin: 15px 0;
     text-align: center;
-    border-radius: 4px;
     padding: 10px;
     color: #000;
     cursor: pointer;
@@ -210,10 +214,12 @@ h2 {
     height: 50px;
     letter-spacing: 0.2px;
     outline: none;
+    font-family:'roboto';
 }
 
 .randomizeBtn:hover, .randomizeBtn:focus, .randomizeBtn:active {
-    background-color: #fff;
+    background-color: #000;
+    color:#fff;
 }
 
 .randomizeBtn i {
@@ -238,14 +244,35 @@ h2 {
 
 #main {
     background-color: #fff;
-    padding: 10%;
+    padding: 5% 10%;
     min-height:600px;
+}
+
+#navbar {
+    width:100%;
+    left:0;
+    top:0;
+        z-index: 10;
+    padding: 20px;
+    background-color: #DCE2E6;
+    border-bottom: 1px solid #E0D7D7;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'josefin slab'
 }
 
 #sidebar {
     min-height: 600px;
-    background-color: #9AD5E8;
+    padding:0;
+    font-family: 'Josefin slab';
+}
+#headingWrapper {
     padding:10% 20px;
+    background-color: #f0f0f0;
+}
+#paragraphWrapper {
+    padding: 10% 20px;
+    background-color: #DCE2E6;
 }
 
 #sidebar p, #sidebar span {
@@ -260,6 +287,7 @@ hr {
     margin-right:10px;
     display:inline-block;
     cursor:pointer;
+    color: rgb(55, 124, 190);
 }
 
 /* ==========================================================================
