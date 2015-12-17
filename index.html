@@ -7,78 +7,128 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Random Font Generator</title>
-        <meta name="description" content="Google Font Generator">
+        <meta name="description" content="A tool to randomly generate fonts for a heading and a paragraph">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->	
+
+        <meta property="og:url"           content="http://www.randomfontgenerator.com" />
+	    <meta property="og:type"          content="website" />
+	    <meta property="og:title"         content="Random Font Generator" />
+	    <meta property="og:description"   content="A tool to randomly generate fonts for a heading and a paragraph" />
+	    <meta property="og:image"         content="http://www.randomfontgenerator.com/RandomFontGenerator.png" />
+	    <meta property="fb:app_id" content="937370836336993" />
+
         <link rel="stylesheet" href="css/normalize.css">	
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main2.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>		
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="fb-root"></div>
+
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '937370836336993',
+		      xfbml      : true,
+		      version    : 'v2.5'
+		    });
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
        
-        <div id="pageContainer"> 	
-        	<div id="navbar">
-        		Random Font Generator
+        <div id="pageContainer"> 
+        	<div id="triangle"></div>
+        	<div id='name'>Random Font Generator</div>
+        	<div id="socialMedia">
+	<!-- 			<a class="socialIcon" href='https://www.facebook.com/dialog/share?app_id=937370836336993&display=popup&href=https%3A%2F%2Frandomfontgenerator.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fwww.randomfontgenerator.com%2Ftools%2Fexplorer'><i class="fa fa-facebook"></i></a> -->
+				<a class="socialIcon" href='https://www.facebook.com/dialog/share?app_id=937370836336993&amp;display=popup&amp;href=http%3A%2F%2Frandomfontgenerator.com&amp;redirect_uri=http%3A%2F%2Fwww.randomfontgenerator.com'><i class="fa fa-facebook"></i></a>
+
+				<a class="socialIcon" href="https://twitter.com/intent/tweet?text=Find%20a%20good%20font%20combination%20at%20www.RandomFontGenerator.com"  data-url="http://www.randomfontgenerator.com" data-text="Find a good font combination at www.RandomFontGenerator.com"><i class="fa fa-twitter"></i></a>
+
+				<a class="socialIcon" href='https://github.com/blueberry20/Google-Fonts-Generator'  target="_blank"><i class="fa fa-github-alt" ></i></a>
         	</div>
-				<div class="row">
-					<div id="main" class="col-lg-9">
-						<h1 id="heading">The quick onyx goblin jumps over the lazy dwarf</h1>						
-						<div id="paragraph"><span id="firstLine"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor. 
+        	<div id="outsideContainer" class='row'>
+        	<div id="insideContainer" class='col-lg-9 col-md-9 col-sm-9'>
+				
+					<div id="main" class="">
+						<h1 id="heading" onClick="this.contentEditable='true';">The quick onyx goblin jumps over the lazy dwarf</h1>						
+						<div id="paragraph" class="paragraph" onClick="this.contentEditable='true';"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
 						</div>
-
-						<div class="row text-center">
-							<div id="bigIcon" onclick="randomizeAllFonts();">
-								<i class="fa fa-refresh"></i>
-								<p>Randomize All Fonts</p>
-							</div>
-						</div>
+						<div id="mobileParagraph" class="paragraph" onClick="this.contentEditable='true';"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. </div>
 					</div>
+				
+				<p id="smallFont">Click on heading or paragraph to edit text</p>
+			</div>
 
-					<div id="sidebar" class="col-lg-3">
-						<div id="headingWrapper">
-							<h2>Heading:</h2>						
-
-							<span id="headingFontInfo"></span>
-							<div></div>
-							<h3>Font Variants:</h3>
-							<span id="headingFontVariants">1 font variant available.</span>
-							<div></div>
-							<button id="randomizeHeading" class="randomizeBtn" onclick="loadFont(true, false);"><i class="fa fa-refresh"></i>Randomize heading</button>
-						</div>
-
-						<div id="paragraphWrapper">
-							<h2>Paragraph:</h2>
-							<span id="paragraphFontInfo"></span>
-							<div></div>
-							<h3>Font Variants:</h3>
-							<span id="paragraphFontVariants">1 font variant available.</span>
-							<div></div>
-							<button id="randomizeParagraph" class="randomizeBtn" onclick="loadFont(false, true)";><i class="fa fa-refresh"></i>Randomize Paragraph</button>
-						</div>
+			<div id="fontInfo" class="col-lg-3 col-md-3 col-sm-3">
+				<div id="bigBtn" onclick="randomizeAllFonts();">
+					<p>Randomize All Fonts</p>
+					<i class="fa fa-refresh"></i>
+				</div>
+				<div id="headingInfo">
+					<div id="headingInfoWrapper" class='headingInfoWrapper infoWrapper current'>
+						<h2>Heading</h2>						
+						<div class='divider'></div>
+						<span id="headingFontInfo"></span>
+						<div></div>
+						<h3>Font Variants:</h3>
+						<span id="headingFontVariants">1 font variant available.</span>
+						<div></div>
+						<button id="randomizeHeading" class="randomizeBtn" onclick="loadFont(true, false);"><i class="fa fa-refresh"></i></button>
 					</div>
 				</div>
+				<div id="paragraphInfo">
+					<div id="paragraphInfoWrapper" class='paragraphInfoWrapper infoWrapper current'>
+						<h2>Paragraph</h2>
+						<div class='divider'></div>
+						<span id="paragraphFontInfo"></span>
+						<div></div>
+						<h3>Font Variants:</h3>
+						<span id="paragraphFontVariants">1 font variant available.</span>
+						<div></div>
+						<button id="randomizeParagraph" class="randomizeBtn" onclick="loadFont(false, true)";><i class="fa fa-refresh"></i></button>
+					</div>
+				</div>
+			</div>
+			</div>
+ 			<div id='socialIcons'>
+ 				<p>Made by <a href='http://www.OlgaRosado.com' target='_blank'>Olga Rosado</a></p>
+				<!-- <a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://www.randomfontgenerator.com" data-text="Find a good font combination by experimenting">Tweet</a>
 
+				<a href='https://github.com/blueberry20/Google-Fonts-Generator'>Github</a>
+				<div
+				  class="fb-like"
+				  data-share="true"
+				  data-width="450"
+				  data-show-faces="true">
+				</div> -->
+			</div> 
 		</div>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-        <script src="js/main.js"></script>
-		<script src="js/velocity.min.js"></script>
-		<script src="js/velocity.ui.min.js"></script>
+        <script src="js/main2.js"></script>
+
 
 		<!--add google analytics script-->
 	
 
-		}
+		
     </body>
 </html>

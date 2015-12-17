@@ -96,9 +96,7 @@ textarea {
 /* ==========================================================================
    custom styles
    ========================================================================== */
-html, body {
-	height:100%;
-}
+
 
 body {
 	position: relative;
@@ -127,7 +125,6 @@ h3 {
 
 #pageContainer {
 	padding: 0;
-	min-height: 100%;
 }
 
 
@@ -154,7 +151,7 @@ h3 {
 #bigIcon {
     cursor: pointer;
     width: 300px;
-    margin: 10% auto;
+    margin: 7% auto 0%;
     padding: 10px;
     border: 1px solid #000;
     color:#000;
@@ -178,13 +175,16 @@ h3 {
 
 #heading, #paragraph {
     opacity:0;
-}
-
-#heading .loaded {
+    margin-right:auto;
+    margin-left:auto;
+    max-width:900px;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
-    opacity:1;
+}
+
+.loaded {
+    opacity:1 !important;
 }
 
 #heading:focus, #paragraph:focus {
@@ -288,6 +288,45 @@ hr {
     display:inline-block;
     cursor:pointer;
     color: rgb(55, 124, 190);
+}
+
+footer {
+    width:100%;
+    font-family: 'Josefin Slab';
+    font-size:20px;
+    color: #999;
+}
+
+footer p {
+    margin:0;
+}
+
+footer a {
+    color: #999;
+}
+
+footer>div {
+    padding:0 1px !important;
+}
+
+footer .text-right, footer .text-left {
+    padding:0 !important;
+}
+
+.footerIcon {
+    color:#999;
+}
+
+.footerIcon i {
+    font-size:30px;
+    margin:0 10px;
+}
+
+.footerContainer {
+     background-color: #DCE2E6;
+     height:130px;
+     line-height:130px;
+     padding:0 30px;
 }
 
 /* ==========================================================================
